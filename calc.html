@@ -1,0 +1,211 @@
+<style>
+
+    body{
+    background-image: url("8423244.jpg") ;
+    }
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: #1f4c21;
+}
+
+h1{
+    font-size: 50px;
+    color: #4CAF50;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    font-size: 30px;
+    color: #4CAF50;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input{
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+}
+
+div{
+    border-radius: 15px;
+    border: 2px solid #4CAF50;
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.adjust{
+    border-radius: 15px;
+    border: 2px solid #4CAF50;
+    width: 490px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+
+}
+
+</style>
+
+
+<body>
+ <center>  <div>
+     <h2>Calculator<br></h2>
+     <form id="form">
+ <input type = "text" name="n1" placeholder="enter value"><br><br>    
+ <input type = "text" name="n2" placeholder="enter value"><br>
+</form>
+    <br><button onclick="add()" style="width: 20%;">+</button>
+    <button onclick="sub()" style="width: 20%;">-</button>
+    <button onclick="mul()" style="width: 20%;">*</button><br>
+    <button onclick="div()" style="width: 20%;">/</button> 
+    <button onclick="pie()" style="width: 20%;">PIE</button>
+    <button onclick="perc()" style="width: 20%;">%</button><br>
+    <button onclick="power()" style="width: 20%;">^</button>
+    <button onclick="log()" style="width: 20%;">Log</button>
+    <button onclick="root()" style="width: 20%;">Root</button><br>
+    <button onclick="lcm()" style="width: 20%;">LCM</button>
+    <button onclick="hcf()" style="width: 20%;">HCF</button>
+    <button onclick="factorial()" style="width: 20%;">!</button>
+  <br>  <br><br><center><h1 class="adjust"></h1></center>
+
+</div></center>
+<script>
+ function add(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+    var sum = parseInt(n1) + parseInt(n2);
+    document.getElementsByTagName("h1")[0].innerHTML = sum;
+}
+
+function sub(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+    var sub = parseInt(n1)-parseInt(n2);
+    document.getElementsByTagName("h1")[0].innerHTML = sub;
+}
+
+function mul(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    var mul = parseInt(n1)*parseInt(n2);
+    document.getElementsByTagName("h1")[0].innerHTML = mul;
+}
+
+function div(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    div = parseInt(n1)/parseInt(n2);
+    document.getElementsByTagName("h1")[0].innerHTML = div;
+}
+
+function clear(){
+    document.getElementsById("form").reset();
+}
+
+function pie(){
+    var pie = 3.1415926535897932384626433832795;
+    document.getElementsByTagName("h1")[0].innerHTML = pie;
+
+}
+
+function perc(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    var perc = parseInt(n1)/100*parseInt(n2);
+    document.getElementsByTagName("h1")[0].innerHTML = perc;
+}
+
+function power(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 =  document.getElementsByName("n2")[0].value;
+
+    var power = Math.pow(parseInt(n1),parseInt(n2));
+    document.getElementsByTagName("h1")[0].innerHTML = power;
+}
+
+function log(){
+    var n1 = document.getElementsByName("n1")[0].value;
+
+    var log = Math.log(parseInt(n1));
+
+    document.getElementsByTagName("h1")[0].innerHTML = log;
+}
+
+function root(){
+    var n1 = document.getElementsByName("n1")[0].value;
+
+    var root = Math.sqrt(parseInt(n1));
+
+    document.getElementsByTagName("h1")[0].innerHTML = root;
+}
+
+function lcm(){
+    let hcf;
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    for(let i=0;i<n1 && i<n2;i++){
+        if(n1%i == 0 && n2%i == 0){
+            hcf = i;
+        }
+    }
+
+    var lcm = (n1*n2)/hcf;
+
+    document.getElementsByTagName("h1")[0].innerHTML = lcm;
+}
+
+function hcf(){
+  var n1 = document.getElementsByName("n1")[0].value;
+  var n2 = document.getElementsByName("n2")[0].value;
+
+    var hcf = 1;
+
+    for(let i=0;i<n1 && i<n2;i++){
+        if(n1%i == 0 && n2%i == 0){
+            hcf = i;
+        }
+    }
+    var val = hcf;
+    
+    document.getElementsByTagName("h1")[0].innerHTML = val;
+}
+
+function factorial(){
+    var n1 = document.getElementsByName("n1")[0].value;
+
+    var fact = 1;
+
+    for(let i=1;i<=n1;i++){
+        fact = fact*i;
+    }
+
+    document.getElementsByTagName("h1")[0].innerHTML = fact;
+}
+
+
+</script>
+
+</body>
