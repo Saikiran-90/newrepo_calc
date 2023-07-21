@@ -87,6 +87,7 @@ div{
     <button onclick="lcm()" style="width: 20%;">LCM</button>
     <button onclick="hcf()" style="width: 20%;">HCF</button>
     <button onclick="factorial()" style="width: 20%;">!</button>
+      <button onclick="gcd()" style="width: 20%;">GCD</button>
   <br>  <br><br><center><h1 class="adjust"></h1></center>
 
 </div></center>
@@ -205,6 +206,20 @@ function factorial(){
     }
 
     document.getElementsByTagName("h1")[0].innerHTML = fact;
+}
+
+    function gcd(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    var gcd = 1;
+
+    for(let i=0;i<n1 && i<n2;i++){
+        if(n1%i == 0 && n2%i == 0){
+            gcd = i;
+        }
+    }
+    document.getElementsByTagName("h1")[0].innerHTML = gcd;
 }
 
 
