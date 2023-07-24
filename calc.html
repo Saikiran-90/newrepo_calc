@@ -1,7 +1,12 @@
+<link rel="icon" type="image/jpg" href="/fav2.jpg"/>
+
 <style>
 
     body{
-    background-image: url("8423244.jpg") ;
+        background-image: url("https://img.freepik.com/free-vector/gradient-numerology-background_23-2150066810.jpg?w=1060&t=st=1689948354~exp=1689948954~hmac=da1ba90a21b2da5666d086d780aaece1035452b5cbbe876f4016ab33927ec178");
+      background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
 button{
@@ -66,8 +71,8 @@ div{
 </style>
 
 
-<body><br><br><br><br>
-    
+<body>
+    <br><br><br><br>
  <center>  <div>
      <h2>Calculator<br></h2>
      <form id="form">
@@ -86,6 +91,7 @@ div{
     <button onclick="lcm()" style="width: 20%;">LCM</button>
     <button onclick="hcf()" style="width: 20%;">HCF</button>
     <button onclick="factorial()" style="width: 20%;">!</button>
+    <button onclick="gcd()" style="width: 20%;">GCD</button>
   <br>  <br><br><center><h1 class="adjust"></h1></center>
 
 </div></center>
@@ -206,6 +212,19 @@ function factorial(){
     document.getElementsByTagName("h1")[0].innerHTML = fact;
 }
 
+function gcd(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    var gcd = 1;
+
+    for(let i=0;i<n1 && i<n2;i++){
+        if(n1%i == 0 && n2%i == 0){
+            gcd = i;
+        }
+    }
+    document.getElementsByTagName("h1")[0].innerHTML = gcd;
+}
 
 </script>
 
