@@ -148,7 +148,7 @@ function power(){
     var n1 = document.getElementsByName("n1")[0].value;
     var n2 =  document.getElementsByName("n2")[0].value;
 
-    var power = Math.pow(parseInt(n1),parseInt(n2));
+    var power = Math.pow(parseFloat(n1),parseFloat(n2));
     document.getElementsByTagName("h1")[0].innerHTML = power;
 }
 
