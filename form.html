@@ -43,10 +43,25 @@
     <h1>Password Validation</h1>
 
     <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters" placeholder="Enter Password">
+     <i class="fa-solid fa-eye  point" id="show"></i>
 <br><br><br>
     <input class="point" type="submit" value="Submit"><br><br><br>
 
   <p> Note:  must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters </p>
+
+    <script>
+
+        const inputPass = document.getElementById("pass");
+const clicked = document.getElementById("show");
+
+     clicked.addEventListener("click", function () {;
+    if (inputPass.type === "password") {
+        inputPass.type = "text";
+    } else {
+        inputPass.type = "password";
+    }
+});
+    </script>
 
 </form>
 </center>
