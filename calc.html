@@ -9,6 +9,19 @@
         background-attachment: fixed;
     }
 
+
+body {
+  display:flex;    
+  justify-content:center;
+  align-items:center;
+
+}
+
+svg {
+  width:100%;
+  height:100%;
+}
+
 button{
     background-color: #4CAF50;
     border: none;
@@ -32,7 +45,7 @@ h1{
 }
 h2{
     font-size: 30px;
-    color: #4CAF50;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -50,11 +63,11 @@ input{
 div{
     border-radius: 15px;
     border: 2px solid #4CAF50;
-    width: 400px;
-    height: 500px;
+    width: absolute;
+    height: absolute;
     margin: 10px;
     padding: 10px;
-    background-color: #f2f2f2;
+    background-color:transparent;
 }
 
 .adjust{
@@ -72,8 +85,9 @@ div{
 
 
 <body>
-    <br><br>
- <center>  <div>
+ <center> 
+
+    <div>
      <h2>Calculator<br></h2>
      <form id="form">
  <input type = "text" name="n1" placeholder="enter value"><br><br>    
@@ -90,12 +104,22 @@ div{
     <button onclick="root()" style="width: 20%;">Root</button><br>
     <button onclick="lcm()" style="width: 20%;">LCM</button>
     <button onclick="hcf()" style="width: 20%;">HCF</button>
-    <button onclick="factorial()" style="width: 20%;">!</button>
+    <button onclick="factorial()" style="width: 20%;">!</button><br>
     <button onclick="gcd()" style="width: 20%;">GCD</button>
-  <br>  <br><br><center><h1 class="adjust"></h1></center>
-
-</div></center>
+    <button onclick="mod()" style="width: 20%;">mod</button>
+  <br>  <br><br><h1 class="adjust"></h1>
+</div>
+</center>
 <script>
+
+function mod(){
+    var n1 = document.getElementsByName("n1")[0].value;
+    var n2 = document.getElementsByName("n2")[0].value;
+
+    var mod = parseInt(n1)%parseInt(n2);
+    document.getElementsByTagName("h1")[0].innerHTML = mod;
+}
+
  function add(){
     var n1 = document.getElementsByName("n1")[0].value;
     var n2 = document.getElementsByName("n2")[0].value;
@@ -198,6 +222,20 @@ function hcf(){
     var val = hcf;
     
     document.getElementsByTagName("h1")[0].innerHTML = val;
+}
+
+function countDivisors(){
+    var n1 = document.getElementsByName("n1")[0].value;
+
+    var count = 0;
+
+    for(let i=1;i<=n1;i++){
+        if(n1%i == 0){
+            count++;
+        }
+    }
+
+    document.getElementsByTagName("h1")[0].innerHTML = count;
 }
 
 function factorial(){
