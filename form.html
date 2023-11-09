@@ -42,7 +42,7 @@
 <form>
     <h1>Password Validation</h1>
 
-    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters" placeholder="Enter Password">
+ &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters" placeholder="Enter Password">
      <i class="fa-solid fa-eye  point" id="show"></i>
 <br><br><br>
     <input class="point" type="submit" value="Submit"><br><br><br>
@@ -52,9 +52,9 @@
  
 </form>
 </center>
-   <script>
-
-        const inputPass = document.getElementById("pass");
+  
+<script >
+    const inputPass = document.getElementById("pass");
 const clicked = document.getElementById("show");
 
      clicked.addEventListener("click", function () {;
@@ -64,6 +64,6 @@ const clicked = document.getElementById("show");
         inputPass.type = "password";
     }
 });
-    </script>
+</script>
 
 </body>
