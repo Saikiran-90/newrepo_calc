@@ -1,6 +1,10 @@
 
 <head>
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+=======
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+>>>>>>> f1.0
 <style>
     input{
             
@@ -47,13 +51,19 @@
 <form>
     <h1>Password Validation</h1>
 
+<<<<<<< HEAD
     <input type="password" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters" placeholder="Enter Password">
      <i class="fa-solid fa-eye  point" id="show"></i>
+=======
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters" placeholder="Enter Password" spellcheck="true" >
+    <i class="fa-solid fa-eye  point" id="show"></i>
+>>>>>>> f1.0
 <br><br><br>
     <input class="point" type="submit" value="Submit"><br><br><br>
 
   <p> Note:  must contain atleast a Number, an Uppercase, a LowerCase and upto 8 characters </p>
 
+<<<<<<< HEAD
     <script>
 
         const inputPass = document.getElementById("pass");
@@ -70,4 +80,23 @@ const clicked = document.getElementById("show");
 
 </form>
 </center>
+=======
+ 
+</form>
+</center>
+  
+<script >
+    const inputPass = document.getElementById("pass");
+const clicked = document.getElementById("show");
+
+     clicked.addEventListener("click", function () {;
+    if (inputPass.type === "password") {
+        inputPass.type = "text";
+    } else {
+        inputPass.type = "password";
+    }
+});
+</script>
+
+>>>>>>> f1.0
 </body>
